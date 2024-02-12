@@ -1,11 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react'
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Login from '../Login';
 import Register from '../Register';
 import Home from '../Home';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Text } from 'react-native';
+import Category from '../category/Category';
+import Profile from '../user/Profile';
+import Wallet from '../wallet/Wallet';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function StackNavigation() {
@@ -19,7 +23,37 @@ return(
             tabBarLabel:"Home",
             tabBarLabelStyle:{color:"black",fontSize:15,},
             headerShown:false,
-            tabBarIcon:({focused})=> focused?(<Text>yes</Text>):(<Text>no</Text>)
+            tabBarIcon:({focused})=> focused?(<Icon name="rocket" size={30} color="#900" />):(<Icon name="rocket" size={30} color="#900" />)
+        }}
+        /> 
+        <Tab.Screen 
+        name='category'
+        component={Category}
+        options={{
+            tabBarLabel:"Category",
+            tabBarLabelStyle:{color:"black",fontSize:15,},
+            headerShown:false,
+            tabBarIcon:({focused})=> focused?(<Icon name="rocket" size={30} color="#900" />):(<Icon name="rocket" size={30} color="#900" />)
+        }}
+        /> 
+        <Tab.Screen 
+        name='profile'
+        component={Profile}
+        options={{
+            tabBarLabel:"Profile",
+            tabBarLabelStyle:{color:"black",fontSize:15,},
+            headerShown:false,
+            tabBarIcon:({focused})=> focused?(<Icon name="rocket" size={30} color="#900" />):(<Icon name="rocket" size={30} color="#900" />)
+        }}
+        /> 
+        <Tab.Screen 
+        name='wallet'
+        component={Wallet}
+        options={{
+            tabBarLabel:"Wallet",
+            tabBarLabelStyle:{color:"black",fontSize:15,},
+            headerShown:false,
+            tabBarIcon:({focused})=> focused?(<Icon name="rocket" size={30} color="#900" />):(<Icon name="rocket" size={30} color="#900" />)
         }}
         /> 
     </Tab.Navigator>

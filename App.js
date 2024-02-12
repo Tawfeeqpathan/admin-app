@@ -15,11 +15,12 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import StackNavigation from './src/main/navigation/StackNavigation';
 
 function App() {
 
   return (
-    <View><Text>hello</Text></View>
+    <StackNavigation/>
   );
 }
 
