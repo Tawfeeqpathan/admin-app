@@ -29,7 +29,7 @@ console.warn(numemail,password)
       <ScrollView >
         <View style={[mystyle.box, { height: 680, borderWidth: 2, flexDirection: "column", gap: 40 }]}>
           <View >
-            <Image source={logo}  style={{ width: 170, height: 170 }} resizeMode="contain"/>
+            <Image source={logo}  style={{ width: 120, height: 120 }} resizeMode="contain"/>
           </View>
           <View style={[mystyle.box, { gap: 20 }]}>
             <View>
