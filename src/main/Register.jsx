@@ -66,7 +66,7 @@ const handleSubmit = () => {
       <ScrollView >
         <View style={[mystyle.box, { height: 800, borderWidth: 2, flexDirection: "column", gap: 15 }]}>
           <View >
-            <Image source={logo} style={{ width: 120, height: 120 }} resizeMode="contain" />
+            <Image source={logo} style={{ width: 160, height: 160 }} resizeMode="contain" />
           </View>
           <View style={[mystyle.box, { gap: 5 }]}>
             <View>

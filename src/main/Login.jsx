@@ -22,14 +22,14 @@ const handleSubmit = () => {
     alert('Please enter the password');
     return;
   }
-console.warn(numemail,password)
+navigation.navigate("main")
 };
   return (
     <SafeAreaView style={{ backgroundColor: 'black' }} >
       <ScrollView >
         <View style={[mystyle.box, { height: 680, borderWidth: 2, flexDirection: "column", gap: 40 }]}>
           <View >
-            <Image source={logo}  style={{ width: 120, height: 120 }} resizeMode="contain"/>
+            <Image source={logo}  style={{ width: 160, height: 160 }} resizeMode="contain"/>
           </View>
           <View style={[mystyle.box, { gap: 20 }]}>
             <View>
