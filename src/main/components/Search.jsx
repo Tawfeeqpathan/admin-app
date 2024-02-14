@@ -6,10 +6,8 @@ import MIcon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import img from "../../../images/coin.png"
 import Anitext from './Anitext';
 export default function Search() {
-    const [changetext,setChangetext] = useState(true);
     const [searchValue,setSearchValue] = useState('')
     const handleSearch= (text)=>{
-          setChangetext(false)
           setSearchValue(text)
     }
     return (
@@ -17,7 +15,7 @@ export default function Search() {
             <View style={[mystyle.box,{flexDirection:'row',gap:5}]}>
                 <View style={[mystyle.box, { flexDirection: 'row', marginLeft: 10 ,width:270}]}>
                    {
-                    changetext?(<View style={{position:'absolute',zIndex:20,marginLeft:50}}>
+                    searchValue.trim()==''?(<View style={{position:'absolute',zIndex:20,marginLeft:50}}>
                     <Anitext/>
                     </View>):null
                    }

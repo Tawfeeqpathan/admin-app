@@ -2,39 +2,32 @@ import React from 'react'
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import MIcon from 'react-native-vector-icons/dist/MaterialIcons';
 import gymimg from "../../../images/gym.png"
-import vegesimg from "../../../images/vegetables.png"
-import dairyimg from "../../../images/Dairy.png"
-import proteinimg from "../../../images/Protein.png"
-import grainimg from "../../../images/Grains.png"
-
-
+import supimg from "../../../images/supplement.png"
+import deitimg from "../../../images/diets.png"
+import goalimg from "../../../images/goal.png"
 export default function Fitness() {
     const data = [
         {
             id: 1,
             img:gymimg,
-            title: "Fruits"
+            title: "Gym"
         },
         {
             id: 2,
-            img:vegesimg,
-            title: "Veg"
+            img:supimg,
+            title: "Supple"
         },
         {
             id: 3,
-            img: grainimg,
-            title: "Grains"
+            img:deitimg,
+            title: "Diet"
         },
         {
             id: 4,
-            img: proteinimg,
-            title: "Protein"
-        },
-        {
-            id: 5,
-            img: dairyimg,
-            title: "Dairy"
+            img: goalimg,
+            title: "Goal"
         },
     ]
     return (
@@ -42,17 +35,17 @@ export default function Fitness() {
             <View>
                 <View style={[mystyle.box, { justifyContent:'flex-start', flexDirection: "row", marginTop: 20, marginLeft: 20 }]}>
                     <TouchableOpacity style={[mystyle.box, { flexDirection: 'row', gap: 6 }]}>
-                        <Icon name="user" size={25} color={"#fff"} />
+                        <MIcon name="fitness-center" size={25} color={"#fff"} />
                         <Text style={[mystyle.text]}>Fitness</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={[mystyle.box, { justifyContent:'flex-start',
-                 flexDirection: 'row',gap:20,marginLeft:30 ,flexWrap:'wrap'}]}>
+                 flexDirection: 'row',gap:10,marginLeft:30 ,flexWrap:'wrap'}]}>
                     {
                         data.map((item) => (
                             <TouchableOpacity style={[mystyle.box,mystyle.item]} key={item.id}>
                                 <Image source={item.img} style={{ width: 40, height: 40, borderRadius: 50 }} resizeMode="contain" />
-                                <Text style={{ color: '#fff',paddingLeft:10 }}>{item.title}</Text>
+                                <Text style={[mystyle.box,{ color: '#fff',paddingLeft:10 }]}>{item.title}</Text>
                             </TouchableOpacity>
                         ))
                     }
@@ -74,7 +67,7 @@ const mystyle = StyleSheet.create({
     },
     item: {
         borderRadius: 50,
-        width: 60,
+        width: 70,
         marginTop:10,
     }
 })

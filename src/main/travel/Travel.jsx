@@ -2,10 +2,10 @@ import React from 'react'
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import fruitsimg from "../../../images/cab.png"
-import vegesimg from "../../../images/img1.jpg"
-import dairyimg from "../../../images/Dairy.png"
-import proteinimg from "../../../images/Protein.png"
+import cabimg from "../../../images/cab.png"
+import busimg from "../../../images/bus.png"
+import autoimg from "../../../images/auto.png"
+import tempoimg from "../../../images/tempo.png"
 import grainimg from "../../../images/Grains.png"
 
 
@@ -13,28 +13,23 @@ export default function Travel() {
     const data = [
         {
             id: 1,
-            img:fruitsimg ,
+            img:cabimg ,
             title: "Cab"
         },
         {
             id: 2,
-            img:vegesimg,
-            title: "Veg"
+            img:autoimg,
+            title: "Auto"
         },
         {
             id: 3,
-            img: grainimg,
-            title: "Grains"
+            img: busimg,
+            title: "Bus"
         },
         {
             id: 4,
-            img: proteinimg,
-            title: "Protein"
-        },
-        {
-            id: 5,
-            img: dairyimg,
-            title: "Dairy"
+            img: tempoimg,
+            title: "Tempo"
         },
     ]
     return (
@@ -51,7 +46,7 @@ export default function Travel() {
                     {
                         data.map((item) => (
                             <TouchableOpacity style={[mystyle.box,mystyle.item]} key={item.id}>
-                                <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
+                                <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 40 }} resizeMode="contain" />
                                 <Text style={{ color: '#fff',paddingLeft:10 }}>{item.title}</Text>
                             </TouchableOpacity>
                         ))
@@ -74,7 +69,7 @@ const mystyle = StyleSheet.create({
     },
     item: {
         borderRadius: 50,
-        width: 60,
+        width: 70,
         marginTop:10,
     }
 })

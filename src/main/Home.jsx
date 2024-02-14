@@ -50,16 +50,15 @@ export default function Home() {
         <Food/>
         </View>
         <View>
-        <Services/>
-        </View>
-        <View>
     <Travel/>
         </View>
         <View>
+        <Services/>
+        </View>
+      
+        <View>
         <Fitness/>
         </View>
-       
-    <Anitext/>
       </ScrollView>
     </SafeAreaView>
   )
