@@ -44,7 +44,7 @@ export default function Services() {
                  flexDirection: 'row',gap:5,marginLeft:30 ,flexWrap:'wrap'}]}>
                     {
                         data.map((item) => (
-                            <TouchableOpacity style={[mystyle.item]} key={item.id}>
+                            <TouchableOpacity style={[mystyle.box,mystyle.item]} key={item.id}>
                                 <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
                                 <Text style={{ color: '#fff',paddingLeft:10 }}>{item.title}</Text>
                             </TouchableOpacity>

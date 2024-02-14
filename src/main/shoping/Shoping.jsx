@@ -17,7 +17,7 @@ export default function Shoping() {
         {
             id: 2,
             img:appaimg,
-            title: "  Apparel"
+            title: "Apparel"
         },
         {
             id: 3,
@@ -32,7 +32,7 @@ export default function Shoping() {
         {
             id: 5,
             img: toyimg,
-            title: "     Toys"
+            title: "Toys"
         },
     ]
     return (
@@ -48,7 +48,7 @@ export default function Shoping() {
                  flexDirection: 'row',gap:5,marginLeft:30 ,flexWrap:'wrap'}]}>
                     {
                         data.map((item) => (
-                            <TouchableOpacity style={[mystyle.item]} key={item.id}>
+                            <TouchableOpacity style={[mystyle.item,mystyle.box]} key={item.id}>
                                 <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
                                 <Text style={[mystyle.box,{ color: '#fff',paddingLeft:0,fontSize:12 }]}>{item.title}</Text>
                             </TouchableOpacity>

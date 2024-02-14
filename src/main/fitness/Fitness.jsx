@@ -2,7 +2,7 @@ import React from 'react'
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import fruitsimg from "../../../images/fruits.png"
+import gymimg from "../../../images/gym.png"
 import vegesimg from "../../../images/vegetables.png"
 import dairyimg from "../../../images/Dairy.png"
 import proteinimg from "../../../images/Protein.png"
@@ -13,7 +13,7 @@ export default function Fitness() {
     const data = [
         {
             id: 1,
-            img:fruitsimg ,
+            img:gymimg,
             title: "Fruits"
         },
         {
@@ -50,8 +50,8 @@ export default function Fitness() {
                  flexDirection: 'row',gap:20,marginLeft:30 ,flexWrap:'wrap'}]}>
                     {
                         data.map((item) => (
-                            <TouchableOpacity style={[mystyle.item]} key={item.id}>
-                                <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
+                            <TouchableOpacity style={[mystyle.box,mystyle.item]} key={item.id}>
+                                <Image source={item.img} style={{ width: 40, height: 40, borderRadius: 50 }} resizeMode="contain" />
                                 <Text style={{ color: '#fff',paddingLeft:10 }}>{item.title}</Text>
                             </TouchableOpacity>
                         ))

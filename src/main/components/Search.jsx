@@ -1,34 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import img from "../../../images/logo.png"
+import MIcon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
+import img from "../../../images/coin.png"
+import Anitext from './Anitext';
 export default function Search() {
+    const [changetext,setChangetext] = useState(true);
+    const [searchValue,setSearchValue] = useState('')
+    const handleSearch= (text)=>{
+          setChangetext(false)
+          setSearchValue(text)
+    }
     return (
         <SafeAreaView style={{ marginBottom: 20 }}>
-            <View style={[mystyle.box,{flexDirection:'row'}]}>
+            <View style={[mystyle.box,{flexDirection:'row',gap:5}]}>
                 <View style={[mystyle.box, { flexDirection: 'row', marginLeft: 10 ,width:270}]}>
+                   {
+                    changetext?(<View style={{position:'absolute',zIndex:20,marginLeft:50}}>
+                    <Anitext/>
+                    </View>):null
+                   }
                     <TextInput
-                        placeholder='search... '
+                      value={searchValue}
                         style={[mystyle.input]}
+                        onChangeText={(text)=>handleSearch(text)}
                     />
-                    <View style={{ marginLeft: -240 }}>
+                    <View style={{ marginLeft: -250 }}>
                         <Icon name="search" size={20} color={'black'} />
                     </View>
                 </View>
                 <View style={[mystyle.mjcoin]} >
-                    <View style={[mystyle.coin,{width: 30, height: 30} ]}>
-                        <Image source={img} style={{ width: 25, height: 25 }} />
+                    <View style={[mystyle.coin,{width: 40, height: 40} ]}>
+                        <Image source={img} style={{ width: 40, height: 40}} />
                     </View>
                     <View>
-                        <Text style={{ color: '#fff' }}>Mj coin</Text>
-                        <Text style={{ color: '#fff', marginLeft: 20 }}>0</Text>
+                        <Text style={{ color: '#fff', marginLeft:5 }}>0</Text>
                     </View>
 
                 </View>
-                <View style={{marginLeft:8}}>
+                <View style={{marginLeft:5}}>
                    <TouchableOpacity>
-                   <Icon name="shopping-cart" size={25} color={"#fff"}/>
+                   <MIcon name="cart-variant" size={40} color={"#fff"}/>
                    </TouchableOpacity>
                 </View>
             </View>
@@ -46,7 +59,7 @@ const mystyle = StyleSheet.create({
         fontSize: 20
     },
     input: {
-        width: 260,
+        width: 270,
         height: 40,
         backgroundColor: '#fff',
         color: 'black',
@@ -54,25 +67,21 @@ const mystyle = StyleSheet.create({
         borderRadius:8,
     },
     mjcoin: {
-        backgroundColor: '#2A2623',
+        backgroundColor: '#312B35',
+        width: 65,
         borderRadius:8,
-        width: 90,
         height: 40,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'row',
-        gap:2,
-        elevation:90,
-        shadowColor: 'red',
+        gap:1,
+        elevation:9,
+        shadowColor: 'gray',
     },
     coin: {
-        width: 30,
-        height: 30,
-        padding:1,
-        borderRadius:20,
-        borderWidth:2,
-        backgroundColor:"orange",
-        borderColor:'yellow'
+        width: 50,
+        height: 50,
+        borderRadius:20,  
     }
 })

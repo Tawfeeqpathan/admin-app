@@ -17,7 +17,7 @@ export default function Food() {
         {
             id: 2,
             img:vegesimg,
-            title: "Veg"
+            title: "Vege"
         },
         {
             id: 3,
@@ -48,7 +48,7 @@ export default function Food() {
                  flexDirection: 'row',gap:5,marginLeft:30 ,flexWrap:'wrap'}]}>
                     {
                         data.map((item) => (
-                            <TouchableOpacity style={[mystyle.item]} key={item.id}>
+                            <TouchableOpacity style={[mystyle.item,mystyle.box]} key={item.id}>
                                 <Image source={item.img} style={{ width: 50, height: 50, borderRadius: 50 }} resizeMode="contain" />
                                 <Text style={{ color: '#fff',paddingLeft:10 }}>{item.title}</Text>
                             </TouchableOpacity>
