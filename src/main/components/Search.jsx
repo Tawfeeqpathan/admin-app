@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import img from "../../../images/logo.png"
@@ -27,7 +27,9 @@ export default function Search() {
 
                 </View>
                 <View style={{marginLeft:8}}>
-                    <Icon name="shopping-cart" size={25} color={"#fff"}/>
+                   <TouchableOpacity>
+                   <Icon name="shopping-cart" size={25} color={"#fff"}/>
+                   </TouchableOpacity>
                 </View>
             </View>
         </SafeAreaView>

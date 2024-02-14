@@ -29,7 +29,8 @@ const Carousel = () => {
       activeDot={<View style={styles.activeDot} />}
     >
       {cData.map((item)=>(<View style={styles.slide}  key={item.id}>
-        <Image source={item.image} style={{height:180,width:380,borderRadius:10}} />
+        <Image source={item.image}   style={{  height:150,
+    width:370,borderRadius:10}} />
       </View>))}
     </Swiper>
   );
@@ -40,6 +41,7 @@ const styles = {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+   
   },
   text: {
     color: '#fff',
