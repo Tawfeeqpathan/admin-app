@@ -14,33 +14,16 @@ export default function Search() {
         <SafeAreaView style={{ marginBottom: 20 }}>
             <View style={[mystyle.box,{flexDirection:'row',gap:5}]}>
                 <View style={[mystyle.box, { flexDirection: 'row', marginLeft: 10 ,width:270}]}>
-                   {
-                    searchValue.trim()==''?(<View style={{position:'absolute',zIndex:20,marginLeft:50}}>
-                    <Anitext/>
-                    </View>):null
-                   }
-                    <TextInput
+                   <View style={{ paddingRight:10}}>
+                        <Icon name="search" size={20} color={'#fff'} />
+                    </View> 
+                     <TextInput
+                     placeholder='Search...'
                       value={searchValue}
                         style={[mystyle.input]}
                         onChangeText={(text)=>handleSearch(text)}
                     />
-                    <View style={{ marginLeft: -250 }}>
-                        <Icon name="search" size={20} color={'black'} />
-                    </View>
-                </View>
-                <View style={[mystyle.mjcoin]} >
-                    <View style={[mystyle.coin,{width: 40, height: 40} ]}>
-                        <Image source={img} style={{ width: 40, height: 40}} />
-                    </View>
-                    <View>
-                        <Text style={{ color: '#fff', marginLeft:5 }}>0</Text>
-                    </View>
-
-                </View>
-                <View style={{marginLeft:5}}>
-                   <TouchableOpacity>
-                   <MIcon name="cart-variant" size={40} color={"#fff"}/>
-                   </TouchableOpacity>
+                   
                 </View>
             </View>
         </SafeAreaView>
@@ -57,7 +40,7 @@ const mystyle = StyleSheet.create({
         fontSize: 20
     },
     input: {
-        width: 270,
+        width: 350,
         height: 40,
         backgroundColor: '#fff',
         color: 'black',

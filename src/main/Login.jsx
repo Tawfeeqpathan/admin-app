@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, View } from 'react-native'
+import { Image, ScrollView,DimensionValue, StyleSheet, Text, TextInput, TouchableHighlight, TouchableOpacity, View, Dimensions } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import logo from "../../images/logo.png";
 export default function Login({ navigation }) {
@@ -24,8 +24,9 @@ const handleSubmit = () => {
   }
 navigation.navigate("main")
 };
+const screenHeight= Dimensions.get('screen').height
   return (
-    <SafeAreaView style={{ backgroundColor: 'black' }} >
+    <SafeAreaView style={{ backgroundColor: 'black',height:screenHeight}} >
       <ScrollView >
         <View style={[mystyle.box, { height: 680, borderWidth: 2, flexDirection: "column", gap: 40 }]}>
           <View >
@@ -67,17 +68,7 @@ navigation.navigate("main")
               <Text style={[mystyle.text,{fontSize:25}]}>Log in</Text>
             </TouchableHighlight>
           </View>
-          <View style={[mystyle.box,{flexDirection:'row'}]}> 
-            <Text style={[mystyle.text]}>
-              Create a new account ?
-            </Text>
-            <TouchableOpacity 
-            onPress={()=>navigation.navigate('register')}
-            >
-            <Text style={{color:'#0066c0',alignSelf: 'flex-start',marginLeft:10,fontSize:20,paddingLeft:20}}>Sign Up</Text>
-            </TouchableOpacity>
-          </View>
-         
+
         </View>
       </ScrollView>
     </SafeAreaView>
