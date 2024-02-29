@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import {  StyleSheet, Text, TextInput, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import MIcon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
-import img from "../../../images/coin.png"
-import Anitext from './Anitext';
 export default function Search() {
     const [searchValue,setSearchValue] = useState('')
     const handleSearch= (text)=>{
