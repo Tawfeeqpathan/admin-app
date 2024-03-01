@@ -1,23 +1,20 @@
-import React, { Component } from 'react'
-import { SafeAreaView, View ,Text} from 'react-native'
+import React from 'react'
+import { SafeAreaView, ScrollView,Dimensions} from 'react-native'
 import {FlashList} from '@shopify/flash-list'
 import Search from './components/Search'
-import Title from './homeComponents/Titles'
+import Title from './components/Titles'
 export default function Home() {
+  const ScreenHeight = Dimensions.get('screen').height
 const Components = [
   <Search/>,<Title/>
 ]
   return (
-    <SafeAreaView style={{backgroundColor:'black',paddingTop:10}}>
-    <View style={{height:300}}>
-  <FlashList
-  data={Components}
-  renderItem={({item})=><View>{item}</View>}
-  keyExtractor={(item,index)=>index.toString()}
-  estimatedItemSize={200}
-  horizontal={false}
-  />
-      </View>
+    <SafeAreaView style={{backgroundColor:'black',paddingTop:50,height:ScreenHeight}}>
+   <ScrollView>
+    <Title/>
+      
+   </ScrollView>
+ 
 
     </SafeAreaView>
   )

@@ -20,7 +20,9 @@ import StackNavigation from './src/main/navigation/StackNavigation';
 function App() {
 
   return (
-    <StackNavigation/>
+
+      <StackNavigation/>
+   
   );
 }
 
