@@ -8,6 +8,7 @@ import Login from '../Login';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../Home';
 import Dashboard from '../dashboard/Dashboard';
+import Plans from '../plans/Plans';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function StackNavigation() {
@@ -47,6 +48,7 @@ export default function StackNavigation() {
             <Stack.Navigator>
                 <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
                 <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }}  />
+                <Stack.Screen name='plans' component={Plans} options={{ headerShown: false }}  />
             </Stack.Navigator>
         </NavigationContainer>
     )
