@@ -22,6 +22,7 @@ export default function Search() {
                     />
                    
                 </View>
+                
             </View>
         </SafeAreaView>
     )
@@ -37,7 +38,7 @@ const mystyle = StyleSheet.create({
         fontSize: 20
     },
     input: {
-        width: 350,
+        width: 300,
         height: 40,
         backgroundColor: '#fff',
         color: 'black',
