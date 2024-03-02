@@ -46,11 +46,13 @@ export default function Title() {
     <View style={[mystyle.box,{flexDirection:'row',flexWrap:'wrap',gap:20,paddingBottom:10}]}>
    {
        data.map((item)=>(
-        <TouchableOpacity style={[mystyle.title,mystyle.box]} key={item.id} onPress={()=>navigation.navigate(item.path)}>
+       <View key={item.id} style={[mystyle.box,]}>
+         <TouchableOpacity style={[mystyle.title,mystyle.box]}  onPress={()=>navigation.navigate(item.path)}>
             <Icon name={item.icon} size={40} color={'#1134A6'} />
             <Text style={[mystyle.text]}>{item.title}</Text>
             <Text style={[mystyle.text]}>546</Text>
         </TouchableOpacity>
+       </View>
       ))
    }
     </View>
@@ -67,15 +69,18 @@ const mystyle = StyleSheet.create({
         width:150,
         height:150,
         backgroundColor:'#fa8200',
-        shadowColor: '#fff',
+        shadowColor: '#fa8200',
         shadowOffset: {
             width: 0,
-            height: 4,
+            height: 20,
         },
         shadowOpacity: 1,
-        shadowRadius: 12,
+        shadowRadius: 49,
         elevation: 10,
-        borderRadius:12,
+        borderRadius: 12,
+        borderColor:'#fff',
+        borderWidth:3
+        
         
     },
     text:{

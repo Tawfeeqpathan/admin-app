@@ -63,7 +63,6 @@ const screenHeight= Dimensions.get('screen').height
               </View>
 
             </View>
-            <Text style={{color:'#0066c0',alignSelf: 'flex-start',marginLeft:10,fontSize:15}}>Forget Password?</Text>
             <TouchableHighlight style={[mystyle.button,mystyle.box]} onPress={ handleSubmit}>
               <Text style={[mystyle.text,{fontSize:25}]}>Log in</Text>
             </TouchableHighlight>
