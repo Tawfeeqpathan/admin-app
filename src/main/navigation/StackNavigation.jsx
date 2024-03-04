@@ -12,21 +12,24 @@ import Plans from '../plans/Plans';
 import PlanDetail from '../plans/PlanDetail';
 import Users from '../users/User';
 import UserDetail from '../users/UserDetail';
+import Gyms from '../gyms/Gyms';
+import GymDetail from '../gyms/GymDetail'
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function StackNavigation() {
     function BottomTabs() {
         return (
-            <Tab.Navigator screenOptions={{tabBarActiveBackgroundColor:'black',tabBarInactiveBackgroundColor:'black',
-            tabBarActiveTintColor:'#fa8200',
-            tabBarStyle:{height:60}
+            <Tab.Navigator screenOptions={{
+                tabBarActiveBackgroundColor: 'black', tabBarInactiveBackgroundColor: 'black',
+                tabBarActiveTintColor: '#fa8200',
+                tabBarStyle: { height: 60 }
             }}>
                 <Tab.Screen
                     name='home'
                     component={Home}
                     options={{
                         tabBarLabel: "Home",
-                        tabBarLabelStyle: {  fontSize: 13, },
+                        tabBarLabelStyle: { fontSize: 13, },
                         headerShown: false,
                         tabBarIcon: ({ focused }) => focused ? (<IonIcon name="home" size={35} color="#fa8200" />)
                             : (<IonIcon name="home-outline" size={35} color="#fff" />)
@@ -42,19 +45,21 @@ export default function StackNavigation() {
                         tabBarIcon: ({ focused }) => focused ? (<MaterialComIcons name="view-dashboard" size={35} color="#fa8200" />) : (<MaterialComIcons name="view-dashboard-outline" size={35} color="#fff" />)
                     }}
                 />
- 
+
             </Tab.Navigator>
         )
     }
     return (
         <NavigationContainer >
-            <Stack.Navigator>   
-                <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }}  />
+            <Stack.Navigator>
+                <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }} />
                 <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
-                <Stack.Screen name='plans' component={Plans} options={{ headerShown: false }}  />
-                <Stack.Screen name='users' component={Users} options={{ headerShown: false }}  />
-                <Stack.Screen name='planDetail' component={PlanDetail} options={{ headerShown: false }}  />
-                <Stack.Screen name='userDetail' component={UserDetail} options={{ headerShown: false }}  />
+                <Stack.Screen name='plans' component={Plans} options={{ headerShown: false }} />
+                <Stack.Screen name='users' component={Users} options={{ headerShown: false }} />
+                <Stack.Screen name='gyms' component={Gyms} options={{ headerShown: false }} />
+                <Stack.Screen name='planDetail' component={PlanDetail} options={{ headerShown: false }} />
+                <Stack.Screen name='userDetail' component={UserDetail} options={{ headerShown: false }} />
+                <Stack.Screen name='gymDetail' component={GymDetail} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

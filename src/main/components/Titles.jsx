@@ -21,24 +21,24 @@ export default function Title() {
         id:3,
         title:"GYMS",
         icon:"sitemap",
-        path:"plans"
+        path:"gyms"
     },
     {
         id:4,
-        title:"PRODUCTS",
-        icon:"product-hunt",
-        path:"plans"
-    },
-    {
-        id:5,
         title:"TRANSITIONS",
         icon:"rupee",
         path:"plans"
     },
     {
-        id:6,
+        id:5,
         title:"TODAY DATA",
         icon:"calendar",
+        path:"plans"
+    },
+    {
+        id:6,
+          title:"PRODUCTS",
+        icon:"product-hunt",
         path:"plans"
     },
 ] 
@@ -48,7 +48,7 @@ export default function Title() {
        data.map((item)=>(
        <View key={item.id} style={[mystyle.box,]}>
          <TouchableOpacity style={[mystyle.title,mystyle.box]}  onPress={()=>navigation.navigate(item.path)}>
-            <Icon name={item.icon} size={40} color={'#1134A6'} />
+            <Icon name={item.icon} size={40} color={'#4285F4'} />
             <Text style={[mystyle.text]}>{item.title}</Text>
             <Text style={[mystyle.text]}>546</Text>
         </TouchableOpacity>

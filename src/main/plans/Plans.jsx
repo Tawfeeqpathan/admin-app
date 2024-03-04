@@ -18,10 +18,10 @@ export default function Plans() {
           renderItem={({ item }) => (
             <View style={mystyle.box}>
               <TouchableOpacity style={[mystyle.box, mystyle.item]} onPress={()=>naviagtion.navigate("planDetail")}>
-                <Text style={[mystyle.headtext]}>{item} Month plan</Text>
+                <Text style={[mystyle.headtext]}>{item} Month plan*</Text>
                 <View style={[mystyle.box, { flexDirection: 'row', justifyContent: 'space-between', gap: 50 }]}>
                   <Text style={mystyle.text}>price</Text>
-                  <Text style={mystyle.text}>1289</Text>
+                  <Text style={mystyle.text}>₹1289</Text>
                 </View>
                 <View style={[mystyle.box, { flexDirection: 'row', justifyContent: 'space-between', gap: 50 }]}>
                   <Text style={mystyle.text}>coins</Text>
@@ -62,9 +62,9 @@ const mystyle = StyleSheet.create({
     borderColor: '#fff'
   },
   headtext: {
-    borderBottomColor: '#1134A6',
-    borderBottomWidth: 2,
+    
+ 
     fontSize: 25,
-    color: '#1134A6'
+    color: '#4285F4'
   }
 })
