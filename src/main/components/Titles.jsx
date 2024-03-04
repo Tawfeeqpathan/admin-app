@@ -15,7 +15,7 @@ export default function Title() {
         id:2,
         title:"USERS",
         icon:"users",
-        path:"plans"
+        path:"users"
     },
     {
         id:3,

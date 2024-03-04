@@ -10,6 +10,8 @@ import Home from '../Home';
 import Dashboard from '../dashboard/Dashboard';
 import Plans from '../plans/Plans';
 import PlanDetail from '../plans/PlanDetail';
+import Users from '../users/User';
+import UserDetail from '../users/UserDetail';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function StackNavigation() {
@@ -50,7 +52,9 @@ export default function StackNavigation() {
                 <Stack.Screen name='main' component={BottomTabs} options={{ headerShown: false }}  />
                 <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
                 <Stack.Screen name='plans' component={Plans} options={{ headerShown: false }}  />
+                <Stack.Screen name='users' component={Users} options={{ headerShown: false }}  />
                 <Stack.Screen name='planDetail' component={PlanDetail} options={{ headerShown: false }}  />
+                <Stack.Screen name='userDetail' component={UserDetail} options={{ headerShown: false }}  />
             </Stack.Navigator>
         </NavigationContainer>
     )
