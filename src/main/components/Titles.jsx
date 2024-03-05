@@ -25,9 +25,9 @@ export default function Title() {
     },
     {
         id:4,
-        title:"TRANSITIONS",
+        title:"TRANSACTION",
         icon:"rupee",
-        path:"plans"
+        path:"transaction"
     },
     {
         id:5,

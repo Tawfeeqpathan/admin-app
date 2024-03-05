@@ -5,7 +5,7 @@ import IonIcon from 'react-native-vector-icons/dist/Ionicons';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import { FlashList } from '@shopify/flash-list'
 import { useNavigation } from '@react-navigation/native'
-export default function Gyms() {
+export default function Transaction() {
     const ScreenHeight = Dimensions.get('screen').height
     const naviagtion = useNavigation()
     return (
@@ -19,21 +19,30 @@ export default function Gyms() {
                     data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
                     renderItem={({ item }) => (
                         <View style={[mystyle.box, { gap: 20 }]}>
-                            <TouchableOpacity style={[mystyle.box, mystyle.item]} onPress={() => naviagtion.navigate("gymDetail")}>
-                                <View style={[mystyle.box, { flexDirection: 'row', justifyContent: 'space-between', gap: 10 }]}>
-                                    <Text style={mystyle.text}>Fitness Gym</Text>
-                                    <View style={[mystyle.box, { flexDirection: 'row' }]}>
-                                        <IonIcon name={'call'} size={20} color={'#4285F4'} />
-                                        <Text style={[mystyle.text]}> 1234567890</Text>
-                                    </View>
+                            <TouchableOpacity style={[mystyle.box, mystyle.item]} onPress={() => naviagtion.navigate("transactionDetail")}>
+                              <View style={[mystyle.box,{flexDirection:'row',gap:60}]}>
+                              <View style={[mystyle.box]}>
+                                    <Text style={mystyle.text}>payer</Text>
+                                    <Text style={mystyle.text}>payee</Text>
+                                    <Text style={[mystyle.text,{color:'#4285F4'}]}>Amount:</Text>
                                 </View>
-                                <View style={[mystyle.box, { flexDirection: 'row',justifyContent:'space-between',gap: 100 }]}>
-                                <Text style={[mystyle.text,{color:'#4285F4'}]}>Blance:</Text>
-                                <Text style={[mystyle.text]}>1200 cions</Text>
+                                <View style={[mystyle.box]}>
+                                    <Text style={mystyle.text}>testuser</Text>
+                                    <Text style={mystyle.text}>fitnessgym</Text>
+                                    <Text style={[mystyle.text]}>35</Text>
+                                </View>
+                                
+                              </View>
+      
+                                <View style={[mystyle.box, { flexDirection: 'row', gap: 10 }]}>
+                                    <View style={[mystyle.box,{flexDirection:'row'}]}>
+                                    <IonIcon name={'calendar'} size={20} color={'#4285F4'} />
+                                    <Text style={mystyle.text}>today</Text>
                                     </View>
-                                <View style={[mystyle.box, { flexDirection: 'row', gap: 5 }]}>
-                                    <IonIcon name={'location'} size={20} color={'#4285F4'} />
-                                    <Text style={mystyle.text}>Mumbai,india</Text>
+                                    <View style={[mystyle.box,{flexDirection:'row'}]}>
+                                    <IonIcon name={'time'} size={20} color={'#4285F4'} />
+                                    <Text style={mystyle.text}>12:00 pm</Text>
+                                    </View>
                                 </View>
                             </TouchableOpacity>
                         </View>
@@ -63,7 +72,7 @@ const mystyle = StyleSheet.create({
     item: {
         marginBottom: 10,
         width: 350,
-        height: 120,
+        height: 130,
         backgroundColor: '#fa8200',
         borderRadius: 10,
         borderWidth: 3,

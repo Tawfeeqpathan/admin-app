@@ -14,6 +14,8 @@ import Users from '../users/User';
 import UserDetail from '../users/UserDetail';
 import Gyms from '../gyms/Gyms';
 import GymDetail from '../gyms/GymDetail'
+import Transaction from '../transaction/Transaction';
+import TransactionDetail from '../transaction/TransactionDetail';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 export default function StackNavigation() {
@@ -56,10 +58,12 @@ export default function StackNavigation() {
                 <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
                 <Stack.Screen name='plans' component={Plans} options={{ headerShown: false }} />
                 <Stack.Screen name='users' component={Users} options={{ headerShown: false }} />
+                <Stack.Screen name='transaction' component={Transaction} options={{ headerShown: false }} />
                 <Stack.Screen name='gyms' component={Gyms} options={{ headerShown: false }} />
                 <Stack.Screen name='planDetail' component={PlanDetail} options={{ headerShown: false }} />
                 <Stack.Screen name='userDetail' component={UserDetail} options={{ headerShown: false }} />
                 <Stack.Screen name='gymDetail' component={GymDetail} options={{ headerShown: false }} />
+                <Stack.Screen name='transactionDetail' component={TransactionDetail} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )
